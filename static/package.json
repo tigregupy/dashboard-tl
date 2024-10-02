@@ -1,0 +1,56 @@
+{
+  "name": "jira-bu-rs-issues-analysis",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "homepage": ".",
+  "scripts": {
+    "start": "PORT=3001 react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "dependencies": {
+    "@atlaskit/button": "^16.10.1",
+    "@atlaskit/code": "^14.6.7",
+    "@atlaskit/css-reset": "^6.3.21",
+    "@atlaskit/form": "^8.11.8",
+    "@atlaskit/icon": "^21.12.7",
+    "@atlaskit/modal-dialog": "^12.7.0",
+    "@atlaskit/primitives": "^1.12.0",
+    "@atlaskit/section-message": "^6.4.16",
+    "@atlaskit/select": "^17.0.1",
+    "@atlaskit/spinner": "^15.4.0",
+    "@atlaskit/table-tree": "^9.3.0",
+    "@atlaskit/tabs": "^13.3.13",
+    "@atlaskit/textfield": "^5.5.2",
+    "@atlaskit/toggle": "^12.6.5",
+    "@atlaskit/tooltip": "^17.8.6",
+    "@forge/bridge": "^2.5.5",
+    "chart.js": "^4.2.1",
+    "he": "^1.2.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^6.0.0-rc.1"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
