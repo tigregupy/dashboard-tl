@@ -202,16 +202,7 @@ const getActionItensCreatedCount = async({ project, startDate, endDate }) => {
   };
 };
 
-const getTotalFinancialItems = async ({ project, startDate, endDate }) => {
-  const jql = mountJql({ type: 'financialRate', project, startDate, endDate });
-  const data = await searchInJira({ jql, maxResults: 100 });
 
-  const financialRate = data.issues?.length;
-    
-  return {
-    financialRate
-  };
-};
 
 const getTotalInvestmentsItems = async ({ project, startDate, endDate }) => {
   const jql = mountJql({ type: 'investmentsRate', project, startDate, endDate });
@@ -225,13 +216,11 @@ const getTotalInvestmentsItems = async ({ project, startDate, endDate }) => {
 };
 
 const getProjectIssuesCount = async ({ project, startDate, endDate }) => {
-  const [ issuesDoneCounts, bugsCreatedCounts, n3TicketsCreated, totalActionItensN3Created, financialRate, investmentsRate ] = await Promise.all([
+  const [ issuesDoneCounts, bugsCreatedCounts, n3TicketsCreated, totalActionItensN3Created ] = await Promise.all([
     getIssuesDoneCounts({ project, startDate, endDate }),
     getBugsCreatedCounts({ project, startDate, endDate }),
     getTicketsCreatedCount({ project, startDate, endDate }),
     getActionItensCreatedCount({ project, startDate, endDate }),
-    getTotalFinancialItems({ project, startDate, endDate }),
-    getTotalInvestmentsItems({project, startDate, endDate})
   ]);
 
   return {
@@ -240,8 +229,6 @@ const getProjectIssuesCount = async ({ project, startDate, endDate }) => {
     ...bugsCreatedCounts,
     ...n3TicketsCreated,
     ...totalActionItensN3Created,
-    ...financialRate,
-    ...investmentsRate
   };
 }
 

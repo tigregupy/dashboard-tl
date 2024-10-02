@@ -135,8 +135,6 @@ const View = ({ configData }) => {
           {configData.showCountTasksDone && (<Tab>Issues done</Tab>)}
           {configData.showCountBugsCreated && (<Tab>Bugs criados</Tab>)}
           {configData.showBugRate && (<Tab>Taxa % de bugs</Tab>)}
-          <Tab>Contábil - Custo</Tab>
-          <Tab>Contábil - Investimentos</Tab>
 
         </TabList>
         {issuesTabs.map(i => i)}
@@ -144,11 +142,6 @@ const View = ({ configData }) => {
         {configData.showCountTasksDone && (<ChartTab data={data} variable="countTasksDone" />)}
         {configData.showCountBugsCreated && (<ChartTab data={data} variable="countBugsCreated" />)}
         {configData.showBugRate && (<ChartTab data={data} variable="bugRate" />)}
-        
-        <ChartTab data={data} variable="financialRate" />
-        <ChartTab data={data} variable="investmentsRate" />
-
-
       </Tabs>
       <InfoModal closeModal={closeModal} isOpen={isOpen} />
     </StyledContent>

@@ -95,14 +95,6 @@ const mountJql = ({ type, project, strategicEpics, notStrategicEpics, startDate,
   if (type === 'tasksAndStoriesDone') {
     jql += ` AND (type = 'Tarefa' OR type = 'Task' OR type = 'Story' OR type = 'Story - Feature' OR type = 'Story - Improvement' OR type = 'Story - Maintenance') AND (status = 'Done' OR status = 'Concluido' OR status = 'Concluído') AND ${resolvedDateFilter}`;
   }
-  
-  if (type === 'financialRate') {
-    jql = `((project = '${project}') OR (project = 'NE' AND 'Produto Gupy[Select List (multiple choices)]' = 'Edu Corp' AND 'Time[Dropdown]' = ${getN3Team(project)})) AND type in (Bug, Vulnerability, 'Tech Task') AND (status = 'Concluído' OR status = 'Done' OR status = '8. Concluído') AND ${resolvedDateFilter}`;
-  }
-
-  if (type === 'investmentsRate') {
-    jql = `project = '${project}' AND type in (Story, Sub-task) AND (status = 'Concluído' OR status = 'Done' OR status = '8. Concluído') AND ${resolvedDateFilter}`;
-  }
 
   return jql;
 };

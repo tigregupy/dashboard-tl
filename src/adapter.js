@@ -136,8 +136,6 @@ const mountCountData = (teams) => {
     n3TicketsCreated: countTotalTeamIssuesByType(teams, 'n3TicketsCreated'),
     totalActionItensN3Created: countTotalTeamIssuesByType(teams, 'totalActionItensN3Created'),
     n3BugsPercentage: countTotalTeamIssuesPercentageByType(teams, 'n3BugsPercentage'),
-    financialRate: countTotalTeamIssuesByType(teams, 'financialRate'),
-    investmentsRate: countTotalTeamIssuesByType(teams, 'investmentsRate'),
   };
 };
 
