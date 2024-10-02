@@ -1,7 +1,0 @@
-/node_modules/
-/dist/
-/.vscode/
-.idea
-/static/build/
-.DS_Store
-/manifest.yml
